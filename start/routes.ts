@@ -12,7 +12,7 @@ import router from '@adonisjs/core/services/router'
 
 
 router.get('/vypni', async () => {
-  exec('raspi-gpio set 17 dl',
+  exec('pinctrl set 17 dl',
         (error, stdout, stderr) => {
             console.log(stdout);
             console.log(stderr);
@@ -28,7 +28,7 @@ router.get('/vypni', async () => {
 })
 
 router.get('/zapni', async () => {
-  exec('raspi-gpio set 17 dh',
+  exec('pinctrl set 17 dh',
         (error, stdout, stderr) => {
             console.log(stdout);
             console.log(stderr);
